@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+    <title>File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 100px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        form {
+            display: unset;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 5px;
+        }
+
+        .choose-file-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .choose-file-button:hover {
+            background-color: #006080;
+        }
+
+        input[type="submit"] {
+            padding: 10px 70px;
+            font-size: 20px;
+            background-color: gold;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Upload File</h2>
+    <form action="UploadServlet" method="post" enctype="multipart/form-data">
+        <label for="file"></label>
+        <input type="file" name="file" id="file">
+        <br><br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+
+</html>
